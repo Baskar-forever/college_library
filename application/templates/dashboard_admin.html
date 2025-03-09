@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h2>Admin Dashboard (Librarian)</h2>
+    <a href="{{ url_for('routes.add_user') }}">Add Students & Staff</a><br>
+    <a href="{{ url_for('routes.add_book') }}">Add Books</a><br>
+    <a href="{{ url_for('routes.manage_books') }}">Manage Books</a><br>
+    <a href="{{ url_for('routes.view_books') }}">View Books</a><br>
+    <a href="{{ url_for('routes.logout') }}">Logout</a>
+</body>
+</html>

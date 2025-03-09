@@ -1,0 +1,11 @@
+Flask
+Flask-SQLAlchemy
+Flask-Migrate
+Flask-Login
+Flask-WTF
+Flask-Bcrypt
+SQLAlchemy
+WTForms
+email-validator
+pymysql
+cryptography

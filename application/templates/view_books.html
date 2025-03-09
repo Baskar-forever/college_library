@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>View Books</title>
+</head>
+<body>
+    <h2>Available Books</h2>
+    <table border="1">
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Quantity</th>
+            <th>Action</th>
+        </tr>
+        {% for book in books %}
+<tr>
+    <td>{{ book.title }}</td>
+    <td>{{ book.author }}</td>
+    <td>{{ book.quantity }}</td>
+    <td>
+        {% if book.quantity > 0 %}
+        <form method="POST" action="{{ url_for('routes.borrow_book', book_id=book.id) }}">
+            <button type="submit">Borrow</button>
+        </form>
+        {% else %}
+        <button disabled>Not Available</button>
+        {% endif %}
+    </td>
+</tr>
+{% endfor %}
+
+    </table>
+</body>
+</html>

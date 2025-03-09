@@ -1,0 +1,93 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+/* Full-page styling */
+body {
+    background: url("../images/library-bg.jpg") no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Login Form Container - Glassmorphism Effect */
+.login-container {
+    background: rgba(255, 255, 255, 0.15); /* Transparent glass effect */
+    backdrop-filter: blur(12px); /* Frosted glass effect */
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    width: 360px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.login-container:hover {
+    transform: scale(1.02);
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Heading */
+h2 {
+    color: white;
+    font-size: 26px;
+    margin-bottom: 18px;
+}
+
+/* Input Fields (Solid Background, No Glass Effect) */
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.9); /* Solid white */
+    color: black;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+input::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+input:focus {
+    border: 1px solid #ff6f00;
+    box-shadow: 0px 0px 8px rgba(255, 111, 0, 0.5);
+}
+
+/* Button */
+button {
+    width: 100%;
+    background: linear-gradient(135deg, #ff7b00, #ff3c00);
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    font-size: 17px;
+    box-shadow: 0px 4px 8px rgba(255, 111, 0, 0.3);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #ff9900, #ff5500);
+    box-shadow: 0px 5px 12px rgba(255, 111, 0, 0.5);
+}
+
+/* Improve responsiveness */
+@media (max-width: 400px) {
+    .login-container {
+        width: 92%;
+        padding: 30px;
+    }
+}
